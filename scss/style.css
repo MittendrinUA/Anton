@@ -1,0 +1,205 @@
+@font-face {
+  font-family: 'MyriadProRegular';
+  src: url("../fonts/MariadPro/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MariadPro/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MariadPro/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MariadPro/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: 'Overpass';
+  src: url("../fonts/Overpass/Overpass-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+body {
+  font-family: 'Overpass', serif; }
+
+.container {
+  max-width: 1210px;
+  height: auto;
+  padding: 0 20px;
+  margin: 0 auto; }
+
+.header {
+  width: 100%; }
+  .header__body {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px; }
+  .header__logo {
+    position: relative;
+    z-index: 5; }
+  .header .menu__body ul {
+    display: flex;
+    align-items: center; }
+    .header .menu__body ul li.menu__item {
+      margin-left: 60px;
+      font-size: 20px;
+      position: relative; }
+      .header .menu__body ul li.menu__item a {
+        text-decoration: none;
+        color: #26272d;
+        padding: 20px 0;
+        display: block; }
+    .header .menu__body ul a::after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      background: #267DF4;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.1s ease; }
+    .header .menu__body ul li.menu__item:hover a::after {
+      opacity: 1;
+      visibility: visible; }
+    .header .menu__body ul li.menu__app {
+      margin-left: 40px;
+      display: inline-flex;
+      overflow: hidden;
+      transition: all 0.3s ease 0s;
+      box-sizing: border-box; }
+      .header .menu__body ul li.menu__app a {
+        display: block;
+        font-family: 'MyriadProRegular', serif;
+        font-size: 20px;
+        transition: 0.3s linear;
+        padding: 12px 30px 12px 30px;
+        text-decoration: none;
+        color: #fff;
+        background: #267DF4;
+        border: 2px solid #267DF4;
+        border-radius: 1.7em; }
+        .header .menu__body ul li.menu__app a i {
+          font-size: 26px;
+          margin-right: 10px; }
+        .header .menu__body ul li.menu__app a span {
+          position: relative;
+          bottom: 2px; }
+    .header .menu__body ul li.menu__app:hover a {
+      border: 2px solid #267DF4;
+      background: none;
+      color: #267DF4; }
+    .header .menu__body ul li.menu__lang {
+      position: relative;
+      display: flex;
+      align-items: center;
+      z-index: 3;
+      margin-left: 40px; }
+      .header .menu__body ul li.menu__lang > img {
+        margin-right: 5px; }
+      .header .menu__body ul li.menu__lang .menu__langList {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease 0s;
+        top: 120%; }
+        .header .menu__body ul li.menu__lang .menu__langList .menu__langItem {
+          margin-bottom: 15%;
+          width: 32px;
+          height: 21px;
+          cursor: pointer; }
+      .header .menu__body ul li.menu__lang .menu__langList._active {
+        opacity: 1;
+        visibility: visible; }
+  .header .menu__arrow {
+    display: block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #26272d;
+    cursor: pointer;
+    transition: 0.2s ease; }
+  .header .menu__arrow._active {
+    transform: rotate(180deg);
+    position: relative;
+    top: 0; }
+  @media (max-width: 1200px) {
+    .header__logo {
+      width: 170px;
+      height: auto; }
+      .header__logo img {
+        width: 100%;
+        object-fit: contain; }
+    .header .menu__body ul li.menu__item {
+      margin-left: 30px; }
+    .header .menu__body ul li.menu__app {
+      margin-left: 30px; } }
+  @media (max-width: 980px) {
+    .header .menu__body {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #d6d5d5;
+      transition: 0.3s ease;
+      overflow: auto; }
+      .header .menu__body ul {
+        flex-direction: column;
+        align-items: center;
+        z-index: 5;
+        padding-top: 70px;
+        padding-bottom: 20px; }
+        .header .menu__body ul li a {
+          font-size: 35px; }
+        .header .menu__body ul li.menu__app {
+          margin-top: 20px; }
+    .header .menu__body::before {
+      content: '';
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      background: #fff; }
+    .header .menu__body._active {
+      top: 0; }
+    .header__logo {
+      position: absolute;
+      left: 50%;
+      transform: translate(-45%, -55%); }
+    .header .menu__body ul li.menu__lang {
+      position: fixed;
+      top: 30px;
+      right: 10px; }
+    .header .menu__icon {
+      z-index: 5;
+      top: -30px;
+      left: 0;
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 18px;
+      cursor: pointer; }
+    .header .menu__icon::before,
+    .header .menu__icon::after,
+    .header .menu__icon span {
+      left: 0;
+      position: absolute;
+      height: 10%;
+      width: 100%;
+      transition: all 0.3s ease 0s;
+      background-color: #000; }
+    .header .menu__icon::before,
+    .header .menu__icon::after {
+      content: ''; }
+    .header .menu__icon::before {
+      top: 0; }
+    .header .menu__icon::after {
+      bottom: 0; }
+    .header .menu__icon span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%); }
+    .header .menu__icon._active span {
+      transform: scale(0) translate(0px, -50%); }
+    .header .menu__icon._active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0px, -50%); }
+    .header .menu__icon._active::after {
+      top: 50%;
+      transform: rotate(45deg) translate(0px, 50%); } }
+
+/*# sourceMappingURL=style.css.map */
