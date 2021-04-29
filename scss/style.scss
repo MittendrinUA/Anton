@@ -16,10 +16,20 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Overpass';
+    src: url('../fonts/Overpass/Overpass-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+
 body {
     font-family: 'Overpass', serif;
 }
 
+body._lock {
+    overflow: hidden;
+}
 .container {
     max-width: 1210px;
     height: auto;
@@ -27,15 +37,30 @@ body {
     margin: 0 auto;
 }
 
+.btn {
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid #267DF4;
+    color: #267DF4;
+    border-radius: 1.7em;
+    padding: 15px 70px;
+    transition: all 0.2s ease 0s;
+}
+
 .header {
     width: 100%;
+    height: auto;
+    min-height: 920px;
+    background: url(../img/introBg.jpg) center no-repeat;
+    background-size: cover;
     &__body {
         display: flex;
         position: relative;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin-top: 60px;
+        padding-top: 60px;
     }
     &__logo {
         position: relative;
@@ -210,13 +235,14 @@ body {
             top: 0;
             width: 100%;
             height: 70px;
-            background: #fff;
+            background: #EBEBED;
+            box-shadow: 0px 0px 15px 3px rgba(0,0,0, 0.17);
         }
         .menu__body._active {
             top: 0;
         }
         &__logo {
-            position: absolute;
+            position: fixed;
             left: 50%;
             transform: translate(-45%, -55%);
             // top: -43px;
@@ -228,10 +254,10 @@ body {
         }
         .menu__icon {
             z-index: 5;
-            top: -30px;
-            left: 0;
+            top: 30px;
+            left: 20px;
             display: block;
-            position: absolute;
+            position: fixed;
             width: 30px;
             height: 18px;
             cursor: pointer;
@@ -274,3 +300,100 @@ body {
         
     }
 }
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    padding: 95px 35px 130px 100px;
+    &__text {
+        margin-top: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-weight: 700;
+            font-size: 60px;
+            color: #26272D;
+            text-align: center;
+        }
+        p {
+            font-family:'MyriadProRegular', serif;
+            font-size: 18px;
+            line-height: 24px;
+            color: #7f8b95;
+            text-align: center;
+            margin-top: 25px;
+        }
+        
+    }
+    &__sign {
+        margin-top: 30px;
+    }
+    &__sup {
+        background: #267DF4;
+        color: #fff;
+    }
+    &__sup:hover {
+        background: none;
+        color: #267DF4;
+    }
+    &__sin {
+        margin: 0 17px;
+    }
+    &__sin:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 1100px) {
+        &__text {
+            margin-top: 90px;
+        }
+        &__img {
+            margin-top: 40px;
+            margin-right: 40px;
+            width: 180px;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    @media (max-width: 930px) {
+        justify-content: center;
+        flex-direction: column;
+        flex-flow: wrap-reverse;
+        padding-left: 60px;
+        padding-right: 60px;
+        &__img {
+            margin: 0 auto;
+            width: 45%;
+        }
+    }
+    @media (max-width: 700px) {
+        justify-content: center;
+        flex-direction: column;
+        flex-flow: wrap-reverse;
+        padding-left: 30px;
+        padding-right: 30px;
+        &__text {
+            h1 {
+                font-size: 40px;
+                
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        &__sign {
+            display: flex;
+            flex-direction: column;
+        }
+        &__sin {
+            margin: 20px 0 0 0;
+        }
+        &__img {
+            margin: 0 auto;
+            width: 60%;
+        }
+    }
+}
+
