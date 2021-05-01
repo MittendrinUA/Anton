@@ -22,10 +22,10 @@
                     </div>
                     <nav class="menu__body">
                         <ul>
-                            <li class='menu__item'><a href="#">About Us</a></li>
-                            <li class='menu__item'><a href="#">Features</a></li>
-                            <li class='menu__item'><a href="#">Pricing</a></li>
-                            <li class='menu__item'><a href="#">Support</a></li>
+                            <li class='menu__item'><a data-goto=".about" href="#" class="menu__link" >About Us</a></li>
+                            <li class='menu__item'><a data-goto=".features" href="#" class="menu__link">Features</a></li>
+                            <li class='menu__item'><a data-goto=".pricing" href="#" class="menu__link" >Pricing</a></li>
+                            <li class='menu__item'><a data-goto=".sup" href="#" class="menu__link" >Support</a></li>
                             <li class='menu__app'>
                                 <a href="#">
                                     <i class="fa fa-apple" aria-hidden="true"></i><span>Get App</span>
@@ -87,6 +87,175 @@
             </div>
         </div>
     </section>
+    <section class="features">
+        <div class="features__title title">
+            <h2>Features</h2>
+        </div>
+            <div class="features__body">
+                <div class="features__row">
+                    <div class="features__text">
+                        <div class="features__numb">1</div>
+                        <h3>Schedule Generation</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Phasellus quis sem ipsum. Fusce leo nisl, ultrices eu luctus
+                            sed, commodo id ipsum. Nam tempor, ipsum quis hendrerit 
+                            maximus, nulla ante maximus diam, at consectetur arcu odio 
+                            vel diam.</p>
+                    </div>
+                    <div class="features__img"><img src="img/feature1.jpg" alt=""></div>
+                </div>
+                <div class="features__row features__row-fr">
+                    <div class="features__text">
+                        <div class="features__numb">2</div>
+                        <h3>Employee Notification</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Phasellus quis sem ipsum. Fusce leo nisl, ultrices eu luctus
+                            sed, commodo id ipsum. Nam tempor, ipsum quis hendrerit 
+                            maximus, nulla ante maximus diam, at consectetur arcu odio 
+                            vel diam.</p>
+                            
+                    </div>
+                    <div class="features__img"><img src="img/feature2.jpg" alt=""></div>
+                </div>
+                <div class="features__row">
+                    <div class="features__text">
+                        <div class="features__numb">3</div>
+                        <h3>Holidays Management</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Phasellus quis sem ipsum. Fusce leo nisl, ultrices eu luctus
+                            sed, commodo id ipsum. Nam tempor, ipsum quis hendrerit 
+                            maximus, nulla ante maximus diam, at consectetur arcu odio 
+                            vel diam.</p>
+                    </div>
+                    <div class="features__img"><img src="img/feature3.jpg" alt=""></div>
+                </div>
+                <div class="features__row features__row-fr">
+                    <div class="features__text">
+                        <div class="features__numb">4</div>
+                        <h3>Clock Real Time</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Phasellus quis sem ipsum. Fusce leo nisl, ultrices eu luctus
+                            sed, commodo id ipsum. Nam tempor, ipsum quis hendrerit 
+                            maximus, nulla ante maximus diam, at consectetur arcu odio 
+                            vel diam.</p>
+                    </div>
+                    <div class="features__img"><img src="img/feature4.jpg" alt=""></div>
+                </div>
+            </div>
+    </section>
+    <section class="pricing">
+        <div class="container">
+            <div class="pricing__title title">
+                <h2>Pricing</h2>
+            </div>
+            <div class="pricing__body">
+                <div class="pricing__about">
+                    <h3>Choose your plan</h3>
+                    <p>Fusce leo nisl, ultrices eu luctus sed, commodo 
+                        id ipsum. Nam tempor, ipsum quis hendrerit 
+                        maximus, nulla ante maximus diam, at consectetur 
+                        arcu odio vel diam. Quisque vel magna vitae ante 
+                        imperdiet commodo quis vel metus. Ut lorem velit, 
+                        posuere id est id, fringilla venenatis neque.</p>
+                    <p class="pricing__ques">Have any questions? <a href="#">Let us know!</a></p>
+                </div>
+                <div class="pricing__card _active">
+                    <h3>Starter</h3>
+                    <p class="pricing__price">$4.99</p>
+                    <p class="pricing__descr">Build your schedule every day</p>
+                    <ul>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>Unlimited events</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>Connect Social Media</li>
+                    </ul>
+                    <a href="#" class="pricing__btn btn">Get started</a>
+                </div>
+                <div class="pricing__card pricing__card-pro">
+                    <h3>Pro</h3>
+                    <p class="pricing__price">$9.99</p>
+                    <p class="pricing__descr">Make your schedule better</p>
+                    <ul>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>Unlimited events</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>Connect Social Media</li>
+                        <li><i class="fa fa-check" aria-hidden="true"></i>Personal Assistant</li>
+                    </ul>
+                    <a href="#" class="pricing__btn btn">Make me a Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sup">
+        <div class="container">
+            <div class="sup__title title">
+                <h3>Support</h3>
+            </div>
+            <div class="sup__body">
+                <form action="#" class="sup__form">
+                    <input type="text" placeholder="Your Name" name="text" id="">
+                    <input type="email" placeholder="Your Email" name="email" id="">
+                    <textarea placeholder="Your Massage" name="your massage" id="" cols="30" rows="10"></textarea>
+                    <a href="#" class="sup__btn btn">Send</a>
+                </form>
+                <div class="sup__text">
+                    <h3>Lorem ipsum dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend consectetur lacus non pacerat. Donec dignissim tincidunt blandit. Vestibulum pharetra iaculis erat vitae tempor. Aliquam vel massa ligula. Nam placerat risus lectus, sodales fermentum velit consectetur et. Morbi odio eros, tristique id libero pellentesque, commodo fringilla metus.</p>
+                    <p class="sup__phone">+1 916-691-7344<br>+1 916-691-7344</p>
+                    <p class="sup__call">Supporting is available 24/7. <a href="">Call Us!</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__body">
+                <div class="footer__top">
+                    <div class="footer__logo">
+                        <img src="img/logo.png" alt="logo">
+                        <p>Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit. Donec nisl tellus, pretium 
+                            vitae luctus in, molestie ac nisl.</p>
+                        <a href="#" class="footer__dwnld">
+                            <img src="img/appStoreBtn.jpg" alt="Download on the App Store">
+                        </a>
+                    </div>
+                    <div class="footer__menu">
+                        <div class="footer__item">
+                            <h4>Learn More</h4>
+                            <a href="#">How it works?</a>
+                            <a href="#">Shedule tools</a>
+                            <a href="#">Videos</a>
+                            <a href="#">Tutorials</a>
+                        </div>
+                        <div class="footer__item footer__about">
+                            <h4>About Us</h4>
+                            <a href="#">About Us</a>
+                            <a href="#">Privacy policy</a>
+                            <a href="#">Features</a>
+                            <a href="#">Terms & Conditions</a>
+                        </div>
+                        <div class="footer__item">
+                            <h4>Contacts</h4>
+                            <address>
+                                <p>9349 Big Horn Blvd, Elk Grove, CA 95758, USA<br>+1 916-691-7344<br>+1 916-691-7345</p>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bot">
+                    <div class="footer__soc">
+                        <a href="#">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="footer__cop">
+                        <p>Copyright © 2017 Shedule LTD | Privacy policy<br>All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 

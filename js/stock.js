@@ -67,7 +67,7 @@ if (menuLinks.length > 0) {
         const menuLink = e.target;
         if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
             const gotoBlock = document.querySelector(menuLink.dataset.goto);
-            const gotoBlockValue = gotoBlock.getBoundingClientReact().top + pageYOffset - document.querySelector('header').offsetHeight;
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
 
             if (iconMenu.classList.contains('_active')) {
                 document.body.classList.remove('lock');
@@ -77,7 +77,7 @@ if (menuLinks.length > 0) {
 
             window.scrollTo({
                 top: gotoBlockValue,
-                behavior: "smoth"
+                behavior: "smooth"
             });
             e.preventDefault();
         }
